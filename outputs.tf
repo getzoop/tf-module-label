@@ -23,6 +23,11 @@ output "environment" {
   description = "Normalized environment."
 }
 
+output "env" {
+  value       = local.env
+  description = "Normalized env."
+}
+
 output "business-owner" {
   value       = local.business_owner
   description = "Normalized business-owner name."

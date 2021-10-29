@@ -18,6 +18,11 @@ variable "environment" {
   description = "Environment, e.g. 'production', 'staging', 'homolog'.\n(Required)"
 }
 
+variable "env" {
+  type        = string
+  description = "Env, e.g. 'production', 'staging', 'homolog'.\n(Required)"
+}
+
 variable "business_owner" {
   type        = string
   description = "Payment area of the resource.\nCheck and follow definitions at [organization-owner](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/2055929939/Padroniza+o+Organizaton-Owner+e+Business+Owner)\n(Required)"

@@ -3,6 +3,7 @@ locals {
   application        = lower(format("%v", var.application))
   product            = lower(format("%v", var.product))
   environment        = lower(format("%v", var.environment))
+  env        = lower(format("%v", var.env))
   business_owner     = lower(format("%v", var.business_owner))
   domain_name        = var.environment == "production" ? lower(var.application) : lower("${var.application}.${var.environment}")
   namespace          = lower(format("%v", var.namespace))
@@ -20,6 +21,7 @@ locals {
       "organization-owner" = local.organization_owner
       "business-owner"     = local.business_owner
       "environment"        = local.environment
+      "env"                = local.env
       "backup"             = local.backup
       "monitoring"         = local.monitoring
       "terraform"          = true

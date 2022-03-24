@@ -1,9 +1,9 @@
 locals {
-  id          = lower(join(var.delimiter, compact(concat(compact(tolist(["zp", ""])), list(var.environment , var.namespace, var.application), var.attributes))))
+  id          = lower(join(var.delimiter, compact(concat(compact(tolist(["zp", ""])), list(var.environment, var.namespace, var.application), var.attributes))))
   application = lower(format("%v", var.application))
   product     = lower(format("%v", var.product))
-  environment = lower(format("%v", var.environment ))
-  domain_name = var.environment  == "production" ? lower(var.application) : lower("${var.application}.${var.environment}")
+  environment = lower(format("%v", var.environment))
+  domain_name = var.environment == "production" ? lower(var.application) : lower("${var.application}.${var.environment}")
   namespace   = lower(format("%v", var.namespace))
   delimiter   = lower(format("%v", var.delimiter))
   attributes  = lower(format("%v", join(var.delimiter, compact(var.attributes))))
@@ -16,7 +16,7 @@ locals {
       "Name"        = local.id
       "product"     = local.product
       "application" = local.application
-      "env"         = local.environment 
+      "env"         = local.environment
       "backup"      = local.backup
       "monitoring"  = local.monitoring
       "terraform"   = true

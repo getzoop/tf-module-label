@@ -19,7 +19,7 @@ output "product" {
 }
 
 output "env" {
-  value       = local.environment 
+  value       = local.environment
   description = "Normalized environment."
 }
 

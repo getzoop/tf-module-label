@@ -13,7 +13,7 @@ variable "product" {
   description = "Product that application is part of, e.g. 'webhook', 'pix'.\n(Required)"
 }
 
-variable "env" {
+variable "environment" {
   type        = string
   description = "Environment, e.g. 'production', 'staging', 'homolog'.\n(Required)"
 }

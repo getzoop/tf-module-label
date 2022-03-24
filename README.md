@@ -124,7 +124,7 @@ No provider.
 | attributes | Additional attributes, e.g. '1', 'blue', 'green' | `list(string)` | `[]` | no |
 | backup\_status | Inform if the resource will need a backup.<br>Defined values: “true” or “false”.<br>When “true”, communicate the area responsible for the backup to insert it. | `bool` | `false` | no |
 | delimiter | n/a | `string` | `"-"` | no |
-| env | Environment, e.g. 'production', 'staging', 'homolog'.<br>(Required) | `string` | n/a | yes |
+| environment | Environment, e.g. 'production', 'staging', 'homolog'.<br>(Required) | `string` | n/a | yes |
 | monitoring\_status | Inform whether the resource will need to be monitored.<br>Defined values: “true” or “false”.<br>When “true”, communicate the area responsible for monitoring to insert it. | `bool` | `false` | no |
 | object\_name | AWS object name, e.g. 'ec2' or 'iam'.<br>(Required) | `string` | n/a | yes |
 | cc | Code structure defined by the Zoop Finance team, where each area has its unique identification code. | `string` | n/a | yes |
@@ -138,7 +138,7 @@ No provider.
 | application | Normalized application name. |
 | attributes | Normalized attributes. |
 | domain\_name | Domain name to be used on Route 53 DNS records. |
-| env | Normalized environment. |
+| environment | Normalized environment. |
 | id | Disambiguated ID. |
 | object\_name | Normalized object name. |
 | cc | Cost Center. |

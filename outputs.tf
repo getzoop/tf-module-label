@@ -23,11 +23,6 @@ output "environment" {
   description = "Normalized environment."
 }
 
-output "business-owner" {
-  value       = local.business_owner
-  description = "Normalized business-owner name."
-}
-
 output "attributes" {
   value       = local.attributes
   description = "Normalized attributes."
@@ -43,7 +38,7 @@ output "tags" {
   description = "Normalized Tag map."
 }
 
-output "organization-owner" {
-  value       = local.organization_owner
-  description = "Normalized organization-owner name."
+output "cc" {
+  value       = local.cc
+  description = "Cost Center"
 }

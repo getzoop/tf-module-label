@@ -10,15 +10,14 @@ logically related:
 
 ```hcl
   module "asg_label" {
-    source  = "git@github.com:getzoop/tf-module-label.git?ref=v1"
+    source  = "git@github.com:getzoop/tf-module-label.git?ref=v1.1"
 
     application        = "transaction-api"
     product            = "authorizer"
     namespace          = "asg"
     environment        = var.environment
-    business_owner     = "plataformas-transacionais"
-    organization_owner = "digital-payments"
-
+    cc                 = "8000CSS"
+    
     tags = {
       repo          = "https://github.com/getzoop/zoop-payments-api"
       shutdown      = var.environment == "production" ? false : true
@@ -96,11 +95,6 @@ namespace:
 module.asg_label.namespace
 ```
 
-namespace:
-```
-module.asg_label.namespace
-```
-
 product:
 ```
 module.asg_label.product
@@ -129,12 +123,11 @@ No provider.
 | application | Application name, e.g. 'mycool-api' or 'jenkins'. <br>Sugetion: Use same name of github's project.<br>(Required) | `string` | n/a | yes |
 | attributes | Additional attributes, e.g. '1', 'blue', 'green' | `list(string)` | `[]` | no |
 | backup\_status | Inform if the resource will need a backup.<br>Defined values: “true” or “false”.<br>When “true”, communicate the area responsible for the backup to insert it. | `bool` | `false` | no |
-| business\_owner | Payment area of the resource.<br>Check and follow definitions at [organization-owner](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/2055929939/Padroniza+o+Organizaton-Owner+e+Business+Owner)<br>(Required) | `string` | n/a | yes |
 | delimiter | n/a | `string` | `"-"` | no |
 | environment | Environment, e.g. 'production', 'staging', 'homolog'.<br>(Required) | `string` | n/a | yes |
 | monitoring\_status | Inform whether the resource will need to be monitored.<br>Defined values: “true” or “false”.<br>When “true”, communicate the area responsible for monitoring to insert it. | `bool` | `false` | no |
 | object\_name | AWS object name, e.g. 'ec2' or 'iam'.<br>(Required) | `string` | n/a | yes |
-| organization\_owner | Big areas that englobes multiple business-owners.<br>Check and follow definitions at [organization-owner](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/2055929939/Padroniza+o+Organizaton-Owner+e+Business+Owner)<br>(Required) | `string` | n/a | yes |
+| cc | Code structure defined by the Zoop Finance team, where each area has its unique identification code. | `string` | n/a | yes |
 | product | Product that application is part of, e.g. 'webhook', 'pix'.<br>(Required) | `string` | n/a | yes |
 | tags | Additional tags, e.g. 'map('shutdown','true')' | `map(string)` | `{}` | no |
 
@@ -144,18 +137,17 @@ No provider.
 |------|-------------|
 | application | Normalized application name. |
 | attributes | Normalized attributes. |
-| business-owner | Normalized business-owner name. |
 | domain\_name | Domain name to be used on Route 53 DNS records. |
 | environment | Normalized environment. |
 | id | Disambiguated ID. |
 | object\_name | Normalized object name. |
-| organization-owner | Normalized organization-owner name. |
+| cc | Cost Center. |
 | product | Normalized product. |
 | tags | Normalized Tag map. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Examples
 
-|environment|namespace|application|attributes|product|**generated id**|
+|env|namespace|application|attributes|product|**generated id**|
 |-----------|-----------|---------|----------|------------|-----------|
 |`production`|`rds`|`transaction-api`|`01`|`authorizer`|`zp-production-rds-transaction-api-01`|

@@ -148,6 +148,6 @@ No provider.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Examples
 
-|env|namespace|application|attributes|product|**generated id**|cc|
+|env|namespace|application|attributes|product|cc|**generated id**|
 |-----------|-----------|---------|----------|------------|-----------|
-|`production`|`rds`|`transaction-api`|`01`|`authorizer`|`zp-production-rds-transaction-api-01`|8000CSS|
+|`production`|`rds`|`transaction-api`|`01`|`authorizer`|`8000CSS`|`zp-production-rds-transaction-api-01`|

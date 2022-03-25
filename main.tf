@@ -9,7 +9,7 @@ locals {
   attributes  = lower(format("%v", join(var.delimiter, compact(var.attributes))))
   backup      = lower(format("%v", var.backup_status))
   monitoring  = lower(format("%v", var.monitoring_status))
-  cc          = lower(format("%v", var.cc))
+  cc          = upper(format("%v", var.cc))
 
   tags = merge(
     {

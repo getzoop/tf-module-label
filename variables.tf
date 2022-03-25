@@ -18,11 +18,6 @@ variable "environment" {
   description = "Environment, e.g. 'production', 'staging', 'homolog'.\n(Required)"
 }
 
-variable "business_owner" {
-  type        = string
-  description = "Payment area of the resource.\nCheck and follow definitions at [organization-owner](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/2055929939/Padroniza+o+Organizaton-Owner+e+Business+Owner)\n(Required)"
-}
-
 variable "attributes" {
   type        = list(string)
   default     = []
@@ -40,11 +35,6 @@ variable "delimiter" {
   default = "-"
 }
 
-variable "organization_owner" {
-  type        = string
-  description = "Big areas that englobes multiple business-owners.\nCheck and follow definitions at [organization-owner](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/2055929939/Padroniza+o+Organizaton-Owner+e+Business+Owner)\n(Required)"
-}
-
 variable "backup_status" {
   type        = bool
   description = "Inform if the resource will need a backup.\nDefined values: “true” or “false”.\nWhen “true”, communicate the area responsible for the backup to insert it."
@@ -55,4 +45,9 @@ variable "monitoring_status" {
   type        = bool
   description = "Inform whether the resource will need to be monitored.\nDefined values: “true” or “false”.\nWhen “true”, communicate the area responsible for monitoring to insert it."
   default     = false
+}
+
+variable "cc" {
+  type        = string
+  description = "Code structure defined by the Zoop Finance team, where each area has its unique identification code. Example: 8000CSS"
 }

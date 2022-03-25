@@ -50,4 +50,32 @@ variable "monitoring_status" {
 variable "cc" {
   type        = string
   description = "Code structure defined by the Zoop Finance team, where each area has its unique identification code. Example: 8000CSS"
+
+  validation {
+    condition = contains(
+      [
+        "8000CSS",
+        "8100CSB",
+        "8100CSC",
+        "8110CSB",
+        "8110CSC",
+        "8120CSB",
+        "8130CSB",
+        "8140CSB",
+        "8200CSS",
+        "8300CSS",
+        "8310CSS",
+        "8320CSS",
+        "8330CSS",
+        "8350CSS",
+        "8360CSS",
+        "8370CSS",
+        "8400CSA",
+        "8410CSA",
+        "8420CSA",
+        "8430CSA"
+      ], var.cc
+    )
+    error_message = "CC must be \"8000CSS\", \"8100CSB\", \"8100CSC\", \"8110CSB\", \"8110CSC\", \"8120CSB\", \"8130CSB\", \"8140CSB\", \"8200CSS\", \"8300CSS\", \"8310CSS\", \"8320CSS\", \"8330CSS\", \"8350CSS\", \"8360CSS\", \"8370CSS\", \"8400CSA\", \"8410CSA\", \"8420CSA\" or \"8430CSA\"."
+  }
 }

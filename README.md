@@ -12,7 +12,7 @@ logically related:
 
 ```hcl
   module "asg_label" {
-    source  = "git@github.com:getzoop/tf-module-label.git?ref=v1.1"
+    source  = "git@github.com:getzoop/tf-module-label.git?ref=v2.1"
 
     application        = "transaction-api"
     product            = "authorizer"

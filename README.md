@@ -1,4 +1,6 @@
-# tf-module-label
+# Terraform Module | Label
+
+> A versão 2.x.x do módulo suporta o Terraform 1.0.x, caso precise utilizar um Terraform mais antigo a versão 1.0.x do módulo suporta o Terrraform 0.12.34.
 
 Terraform module designed to generate consistent label names and tags for
 resources, based on Zoop's AWS tagging model, available [here](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/1774354968/AWS+tagging#Padr%C3%A3o-tag%E2%80%99s-%E2%80%9Cproduct%E2%80%9D).
@@ -27,6 +29,7 @@ logically related:
       min           = var.asg_min_size
     }
   }
+}
 ```
 
 :exclamation: Shutdown tags `must` be configured, as describte at [this](https://pag-zoop.atlassian.net/wiki/spaces/OPS/pages/366347060/AWS+EC2+Sleep+Scheduler) guideline.
@@ -76,7 +79,7 @@ module "asg" {
 }
 ```
 
-## Cat Jumps: :smile_cat:
+## Cat Jumps :smile_cat:
 
 It's possible to instance values used by module, e.g.:
 
@@ -110,11 +113,21 @@ module.asg_label.domain_name
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.31 |
+| terraform | ~> 1.0.0 |
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| [local](https://registry.terraform.io/providers/hashicorp/local/2.1.0) | ~> 2.1.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
 
 ## Inputs
 

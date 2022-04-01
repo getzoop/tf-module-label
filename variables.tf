@@ -54,28 +54,28 @@ variable "cc" {
   validation {
     condition = contains(
       [
-        "8000CSS",
-        "8100CSB",
-        "8100CSC",
-        "8110CSB",
-        "8110CSC",
-        "8120CSB",
-        "8130CSB",
-        "8140CSB",
-        "8200CSS",
-        "8300CSS",
-        "8310CSS",
-        "8320CSS",
-        "8330CSS",
-        "8350CSS",
-        "8360CSS",
-        "8370CSS",
-        "8400CSA",
-        "8410CSA",
-        "8420CSA",
-        "8430CSA"
+        "8000SCT",
+        "8100BCT",
+        "8100CCT",
+        "8110BCT", 
+        "8110CCT",
+        "8120BCT",
+        "8130BCT",
+        "8140BCT",
+        "8200SCT",
+        "8300SCT",
+        "8310SCT",
+        "8320SCT",
+        "8330SCT",
+        "8350SCT",
+        "8360SCT",
+        "8370SCT",
+        "8400ACT",
+        "8410ACT",
+        "8420ACT",
+        "8430ACT"
       ], var.cc
     )
-    error_message = "CC must be \"8000CSS\", \"8100CSB\", \"8100CSC\", \"8110CSB\", \"8110CSC\", \"8120CSB\", \"8130CSB\", \"8140CSB\", \"8200CSS\", \"8300CSS\", \"8310CSS\", \"8320CSS\", \"8330CSS\", \"8350CSS\", \"8360CSS\", \"8370CSS\", \"8400CSA\", \"8410CSA\", \"8420CSA\" or \"8430CSA\"."
+    error_message = "CC must be \"8000SCT\", \"8100BCT\", \"8100CCT\", \"8110BCT\", \"8110CCT\", \"8120BCT\", \"8130BCT\", \"8140BCT\", \"8200SCT\", \"8300SCT\", \"8310SCT\", \"8320SCT\", \"8330SCT\", \"8350SCT\", \"8360SCT\", \"8370SCT\", \"8400ACT\", \"8410ACT\", \"8420ACT\" or \"8430ACT\"."
   }
 }

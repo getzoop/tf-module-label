@@ -51,31 +51,31 @@ variable "cc" {
   type        = string
   description = "Code structure defined by the Zoop Finance team, where each area has its unique identification code. Example: 8000CSS"
 
-  validation {
-    condition = contains(
-      [
-        "8000SCT",
-        "8100BCT",
-        "8100CCT",
-        "8110BCT", 
-        "8110CCT",
-        "8120BCT",
-        "8130BCT",
-        "8140BCT",
-        "8200SCT",
-        "8300SCT",
-        "8310SCT",
-        "8320SCT",
-        "8330SCT",
-        "8350SCT",
-        "8360SCT",
-        "8370SCT",
-        "8400ACT",
-        "8410ACT",
-        "8420ACT",
-        "8430ACT"
-      ], var.cc
-    )
-    error_message = "CC must be \"8000SCT\", \"8100BCT\", \"8100CCT\", \"8110BCT\", \"8110CCT\", \"8120BCT\", \"8130BCT\", \"8140BCT\", \"8200SCT\", \"8300SCT\", \"8310SCT\", \"8320SCT\", \"8330SCT\", \"8350SCT\", \"8360SCT\", \"8370SCT\", \"8400ACT\", \"8410ACT\", \"8420ACT\" or \"8430ACT\"."
-  }
+#  validation {
+#    condition = contains(
+#      [
+#        "8000SCT",
+#        "8100BCT",
+#        "8100CCT",
+#        "8110BCT", 
+#        "8110CCT",
+#        "8120BCT",
+#        "8130BCT",
+#        "8140BCT",
+#        "8200SCT",
+#        "8300SCT",
+#        "8310SCT",
+#        "8320SCT",
+#        "8330SCT",
+#        "8350SCT",
+#        "8360SCT",
+#        "8370SCT",
+#        "8400ACT",
+#        "8410ACT",
+#        "8420ACT",
+#        "8430ACT"
+#      ], var.cc
+#    )
+#    error_message = "CC must be \"8000SCT\", \"8100BCT\", \"8100CCT\", \"8110BCT\", \"8110CCT\", \"8120BCT\", \"8130BCT\", \"8140BCT\", \"8200SCT\", \"8300SCT\", \"8310SCT\", \"8320SCT\", \"8330SCT\", \"8350SCT\", \"8360SCT\", \"8370SCT\", \"8400ACT\", \"8410ACT\", \"8420ACT\" or \"8430ACT\"."
+#  }
 }

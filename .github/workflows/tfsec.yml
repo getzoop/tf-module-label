@@ -13,6 +13,7 @@ on:
   schedule:
     - cron: '33 0 * * 0'
 
+
 jobs:
   tfsec:
     name: Run tfsec sarif report

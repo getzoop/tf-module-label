@@ -5,6 +5,7 @@
 Terraform module designed to generate consistent label names and tags for
 resources, based on Zoop's AWS tagging model, available [here](https://pag-zoop.atlassian.net/wiki/spaces/CE/pages/1774354968/AWS+tagging#Padr%C3%A3o-tag%E2%80%99s-%E2%80%9Cproduct%E2%80%9D).
 
+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
 ## Usage
 
 It's recommended to use one `tf-module-label` for each group of resources

@@ -1,5 +1,5 @@
 locals {
-  id             = lower(join(var.delimiter, compact(concat(tolist(var.application, var.namespace, var.environment), var.attributes))))
+  id             = lower(join(var.delimiter, compact(concat(tolist([var.application, var.namespace, var.environment), var.attributes]))))
   application    = lower(format("%v", var.application))
   service        = lower(format("%v", var.service))
   environment    = lower(format("%v", var.environment))

@@ -17,7 +17,7 @@ on:
 jobs:
   tfsec:
     name: Run tfsec sarif report
-    runs-on: ubuntu-latest
+    runs-on: services-nonprod
     permissions:
       actions: read
       contents: read
